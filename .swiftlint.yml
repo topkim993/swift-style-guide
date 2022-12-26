@@ -1,63 +1,161 @@
 opt_in_rules:
+  # 비교 할때 변수는 왼쪽 상수는 오른쪽에 있어야 합니다. https://realm.github.io/SwiftLint/yoda_condition.html
   - yoda_condition
+  
+  # 예전스타일 랜덤 함수를 사용하지 않습니다 https://realm.github.io/SwiftLint/legacy_random.html
   - legacy_random
+  
+  # operation 사용시 양옆에 공백이 있어야 합니다. https://realm.github.io/SwiftLint/operator_whitespace.html
   - operator_usage_whitespace
+  
+  # 상위 클래스나 objcmembers를 사용했을경우 아래에서는 @objc를 중복해서 사용하지 않습니다. https://realm.github.io/SwiftLint/redundant_objc_attribute.html
   - redundant_objc_attribute
+  
+  # import를 알파벳순으로 정렬해야 합니다. https://realm.github.io/SwiftLint/sorted_imports.html
   - sorted_imports
+  
+  # someBool = !someBool.대신에 toggle()을 활용합니다. https://realm.github.io/SwiftLint/toggle_bool.html
   - toggle_bool
+  
+  # 사용하지 않는 제어문 이름은 제거해야합니다. https://realm.github.io/SwiftLint/unused_control_flow_label.html
   - unused_control_flow_label
+  
+  # 수직으로는 여백이 2줄이상 생기면 안됩니다. https://realm.github.io/SwiftLint/vertical_whitespace.html
   - vertical_whitespace
+  
+  # 클로저의 내용과 괄호사이엔 공백이 있어야합니다. https://realm.github.io/SwiftLint/closure_spacing.html
   - closure_spacing
+  
+  # collection들의 버티컬 위치가 일치해야합니다 https://realm.github.io/SwiftLint/collection_alignment.html
   - collection_alignment
+  
+  # 아규먼트 괄호도 한줄에 있거나 각각따로 있어야 합니다 https://realm.github.io/SwiftLint/multiline_arguments_brackets.html
   - multiline_arguments
+  
+  # 아규먼트 괄호도 한줄에 있거나 각각따로 있어야 합니다 https://realm.github.io/SwiftLint/multiline_arguments_brackets.html
   - multiline_arguments_brackets
+  
+  # 함수 체이닝도 한줄에 있거나 따로 있어야 합니다 https://realm.github.io/SwiftLint/multiline_function_chains.html
   - multiline_function_chains
+  
+  # 리터럴 괄호도 한줄에 있거나 따로 있어야 합니다. https://realm.github.io/SwiftLint/multiline_literal_brackets.html
   - multiline_literal_brackets
+  
+  # 파라미터들도 한줄에 있거나 따로 있어야 합니다. https://realm.github.io/SwiftLint/multiline_parameters.html
   - multiline_parameters
+  
+  # 파라미터 괄호도 한줄에있거나 따로 있어야 합니다.  https://realm.github.io/SwiftLint/multiline_parameters_brackets.html
   - multiline_parameters_brackets
+  
+  # toNot(equal: 대신 줄여서 != 나 toNotEqual와 함수를 같이 만들어서 사용합니다. https://realm.github.io/SwiftLint/nimble_operator.html
   - nimble_operator
+  
+  # 10진수일때 4자리마다 _로 구분합니다. https://realm.github.io/SwiftLint/number_separator.html
   - number_separator
+  
+  # super를 콜해야하는경우 super를 콜해야합니다. https://realm.github.io/SwiftLint/overridden_super_call.html
   - overridden_super_call
+  
+  # extension 안에는 override 하지 않습니다. https://realm.github.io/SwiftLint/override_in_extension.html
   - override_in_extension
+  
+  # interface builder를 사용하지 않습니다. https://realm.github.io/SwiftLint/prohibited_interface_builder.html
   - prohibited_interface_builder
+  
+  # camel case enum일경우 raw값을 필수로 입력해야합니다. https://realm.github.io/SwiftLint/raw_value_for_camel_cased_codable_enum.html
   - raw_value_for_camel_cased_codable_enum
+  
+  # type추론이 가능할때 type을 쓰지 않습니다. https://realm.github.io/SwiftLint/redundant_type_annotation.html
   - redundant_type_annotation
+  
+  # sorted().first, sorted().last보다 min() 또는 max()를 사용하는 것이 좋습니다. https://realm.github.io/SwiftLint/sorted_first_last.html
   - sorted_first_last
+  
+  # 클로저 인수를 선언 할 때는 괄호가 필요하지 않습니다. https://realm.github.io/SwiftLint/unneeded_parentheses_in_closure_argument.html
   - unneeded_parentheses_in_closure_argument
+  
+  # capturing시 unowned보다 weak를 선호합니다. https://realm.github.io/SwiftLint/unowned_variable_capture.html
   - unowned_variable_capture
+  
+  # 함수를 사용할때 인자들이 여러개일경우 세로로 같은줄에 있어야 합니다. https://realm.github.io/SwiftLint/vertical_parameter_alignment_on_call.html
   - vertical_parameter_alignment_on_call
+  
+  # case들문 사이에는 공백이 있어야 합니다. https://realm.github.io/SwiftLint/vertical_whitespace_between_cases.html
   - vertical_whitespace_between_cases
+  
+  # 닫는 괄호 앞에는 공백이 있으면 안됩니다. https://realm.github.io/SwiftLint/vertical_whitespace_closing_braces.html
   - vertical_whitespace_closing_braces
+  
+  # 여는 괄호 다음에는 공백이 있으면 안됩니다. https://realm.github.io/SwiftLint/vertical_whitespace_opening_braces.html
   - vertical_whitespace_opening_braces
+  
+  # delegate는 weak로 합니다. https://realm.github.io/SwiftLint/weak_delegate.html
   - weak_delegate
+  
+  # 변수 선언시 ! 로 선언하지 않습니다 https://realm.github.io/SwiftLint/implicitly_unwrapped_optional.html
   - implicitly_unwrapped_optional
+  
+  # force unwrapping을 하지 않습니다. https://realm.github.io/SwiftLint/force_unwrapping.html
   - force_unwrapping
+  
+  # force try를 하지 않습니다. https://realm.github.io/SwiftLint/force_try.html
   - force_try
+  
+  # force cast를 하지 않습니다 https://realm.github.io/SwiftLint/force_cast.html
   - force_cast
+  
+  # 탭을 필요없이 두번이상 하지 않습니다 https://realm.github.io/SwiftLint/indentation_width.html
   - indentation_width
+  
+  # string 빈문자열 체크시 "" 대신 isempty를 사용한다 https://realm.github.io/SwiftLint/empty_string.html
   - empty_string
-  - used_import
+  
+  # 사용하지 않는 import는 제거 합니다. https://realm.github.io/SwiftLint/unused_import.html
+  - unused_import
 
 disabled_rules:
+  # line의 마지막에는 빈 여백이 있으면 안됩니다. https://realm.github.io/SwiftLint/trailing_whitespace.html
   - trailing_whitespace
+  
+  # type body의 길이가 길면 안됩니다. 200자  https://realm.github.io/SwiftLint/type_body_length.html
   - type_body_length
+  
+  # 함수의 길이는 길지 않아야 합니다.  https://realm.github.io/SwiftLint/function_body_length.html
   - function_body_length
+  
+  # 파일 길이가 길면 안됩니다. https://realm.github.io/SwiftLint/file_length.html
   - file_length
+  
+  # Case 문은 둘러싸는 switch 문과 세로로 정렬되어야 하며, 다르게 구성된 경우 들여쓰기되어야 합니다.  https://realm.github.io/SwiftLint/switch_case_alignment.html
+  - switch_case_alignment
 
+# line의 길이를 제한합니다 https://realm.github.io/SwiftLint/line_length.html
 line_length: 99
 
 indentation_width:
   indentation_width: 2
-  
+
+# 변수나 클래스등 이름은 소문자, 대문자로 시작하며 너무길거나 짧으면 안됩니다. https://realm.github.io/SwiftLint/identifier_name.html
 identifier_name:
+  # min_length에서
   min_length:
+    # 에러만 적용
     error: 1
-
+    
 force_unwrapping:
+  # 오류로 표시
   severity: error
-
 force_cast:
+  # 오류로 표시
+  severity: error
+force_try:
+  # 오류로 표시
   severity: error
 
-force_try:
-  severity: error
+custom_rules:
+  # addTarget 금지
+  no_add_target:
+    regex: "(addTarget)"
+    match_kinds:
+      - identifier
+    severity: error
