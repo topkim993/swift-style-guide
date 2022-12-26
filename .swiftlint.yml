@@ -104,9 +104,6 @@ opt_in_rules:
   # force cast를 하지 않습니다 https://realm.github.io/SwiftLint/force_cast.html
   - force_cast
   
-  # 탭을 필요없이 두번이상 하지 않습니다 https://realm.github.io/SwiftLint/indentation_width.html
-  - indentation_width
-  
   # string 빈문자열 체크시 "" 대신 isempty를 사용한다 https://realm.github.io/SwiftLint/empty_string.html
   - empty_string
   
@@ -132,15 +129,12 @@ disabled_rules:
 # line의 길이를 제한합니다 https://realm.github.io/SwiftLint/line_length.html
 line_length: 99
 
-indentation_width:
-  indentation_width: 2
-
 # 변수나 클래스등 이름은 소문자, 대문자로 시작하며 너무길거나 짧으면 안됩니다. https://realm.github.io/SwiftLint/identifier_name.html
 identifier_name:
   # min_length에서
   min_length:
-    # 에러만 적용
     error: 1
+    warning: 1
     
 force_unwrapping:
   # 오류로 표시
@@ -158,4 +152,3 @@ custom_rules:
     regex: "(addTarget)"
     match_kinds:
       - identifier
-    severity: error
