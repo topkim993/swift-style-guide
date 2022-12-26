@@ -1,58 +1,189 @@
-# file options
+###################################### file options ###############################################
 
 --exclude Tests/XCTestManifests.swift,Tests/BadConfig,Snapshots,Build,PluginTests
 
-# format options
+##################################### format options ##############################################
 
+# swift version을 설정 합니다.
+--swiftversion 5.7
+
+# braces 규칙 옵션
+# if 열림 중괄호를 개행하지 않고 사용합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#braces
 --allman false
---binarygrouping 4,8
---commas always
---comments indent
---decimalgrouping 3,6
+
+# trailingCommas 규칙 옵션
+# Collection 마지막의 `,`를 사용하지 않습니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#trailingCommas
+--commas inline
+
+# numberFormatting 규칙 옵션
+# Decimal 값을 3개 단위로 언더바(_)를 사용하여 분리 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#numberFormatting
+--decimalgrouping 3
+
+# numberFormatting 규칙 옵션
+# Hex 값을 2개 단위로 언더바(_)를 사용하여 분리 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#numberFormatting
+--hexgrouping 2
+
+# numberFormatting 규칙 옵션
+# Hex 값을 대문자로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#numberFormatting
+--hexliteralcase uppercase
+
+# elseOnSameLine 규칙 옵션
+# if 닫힘 중괄호와 else 문을 같은 라인에 작성 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#elseOnSameLine
 --elseposition same-line
---empty void
---exponentcase lowercase
---exponentgrouping disabled
---fractiongrouping disabled
---header ignore
---hexgrouping 4,8
---hexliteralcase uppercase
---ifdef indent
+
+# indent 규칙 옵션
+# 전처리문 #if의 내부 코드 블럭 indent를 사용하지 않습니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#indent
+--ifdef no-indent
+
+# indent 규칙 옵션
+# 들여쓰기는 2칸으로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#indent
 --indent 2
---indentcase false
---importgrouping testable-bottom
---linebreaks lf
---maxwidth none
---octalgrouping 4,8
+
+# indent 규칙 옵션
+# Switch문의 case는 들여쓰기를 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#indent
+--indentcase true
+
+# sortedImports 규칙 옵션
+# import 문을 사전순으로 정렬합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#sortedImports
+--importgrouping alpha
+
+# wrapSingleLineComments 규칙 옵션
+# 지정된 을(를) 초과하는 한 줄 주석을 래핑 합니다
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapSingleLineComments
+--maxwidth 99
+
+# spaceAround 규칙 옵션
+# 연산자 기능의 간격을 설정 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#spaceAround
 --operatorfunc spaced
---patternlet hoist
+
+# spaceAround 규칙 옵션
+# Range 기능의 간격을 설정 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#spaceAround
 --ranges spaced
---self remove
+
+# hoistPatternLet 규칙 옵션
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#hoistpatternlet
+--patternlet hoist
+
+# redundantSelf 규칙 옵션
+# 생성자에서 멤버 변수에 self를 사용합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#redundantSelf
+--self init-only
+
+# semicolons 규칙 옵션
+# 세미콜론을 제거합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#semicolons
 --semicolons inline
---stripunusedargs always
---swiftversion 5.1
+
+# unusedArguments 규칙 옵션
+# 클로저에서 사용하지 않는 함수 인수를 언더바(_)로 표시 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#unusedArguments
+--stripunusedargs closure-only
+
+# trailingSpace 규칙 옵션
+# 줄 끝에서 후행 공백을 제거합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#trailingSpace
 --trimwhitespace always
+
+# extensionAccessControl 규칙 옵션
+# Extension 접근제어자 작성 시 func에 작성 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#extensionAccessControl
 --extensionacl on-declarations
---hexliteralcase uppercase
+
+# wrapArguments 규칙 옵션
+# Wrap Arguments를 before-first 방식으로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapArguments
 --wraparguments before-first
+
+# wrapArguments 규칙 옵션
+# Wrap Parametes를 before-first 방식으로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapArguments
 --wrapparameters before-first
+
+# wrapArguments 규칙 옵션
+# Wrap Collections를 before-first 방식으로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapArguments
 --wrapcollections before-first
---wrapconditions before-first
+
+# wrapArguments 규칙 옵션
+# Wrap typealiases를 before-first 방식으로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapArguments
 --wraptypealiases before-first
 
-# rules
+# wrapArguments 규칙 옵션
+# Arguments를 after-first 방식으로 사용 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapArguments
+# example
+# good case
+# guard let a = a else {
+#   return
+# }
+# bad case
+# guard
+#   let a = a else {
+#   return
+# }
+--wrapconditions after-first
+
+####################################### enable rules ##############################################
+
+# collection.count == 0 과 비교 하는 것보다 우선 isEmpty를 사용합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#isempty
 --enable isEmpty
+
+# 블록 주석을 한 줄 주석으로 변경합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#blockComments
+--enable blockComments
+
+# import 이후에 개행을 사용합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#blankLineAfterImports
 --enable blankLineAfterImports
+
+# import 문 사이에 개행을 허용하지 않습니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#blankLinesBetweenImports
 --enable blankLinesBetweenImports
+
+# 선언 이전의 주석에는 문서 주석을 사용하십시오.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#docComments
 --enable docComments
---enable sortedSwitchCases
+
+# 인라인 조건문의 본문을 새 줄로 래핑합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapConditionalBodies
 --enable wrapConditionalBodies
+
+# 한 줄에 하나의 enum 케이스를 작성합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapEnumCases
 --enable wrapEnumCases
+
+# 한 줄에 하나의 스위치 케이스를 작성합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapSwitchCases
 --enable wrapSwitchCases
 
+####################################### disable rules #############################################
+
+# keyPath 기반 구문으로 변환합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#preferKeyPath
 --disable preferKeyPath
---disable redundantSelf
+
+# 변수 선언에서 중복 유형을 제거 합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#redundantType
 --disable redundantType
---disable sortDeclarations
---disable unusedArguments
+
+# 여러 줄 문의 여는 중괄호를 묶습니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#wrapMultilineStatementBraces
 --disable wrapMultilineStatementBraces
+
+# enum 사례에 대한 중복 원시 문자열 값을 제거합니다.
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#redundantRawValues
+--disable redundantRawValues
