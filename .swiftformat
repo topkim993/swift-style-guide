@@ -150,10 +150,6 @@
 # https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#blankLineAfterImports
 --enable blankLineAfterImports
 
-# import 문 사이에 개행을 허용하지 않습니다.
-# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#blankLinesBetweenImports
---enable blankLinesBetweenImports
-
 # 선언 이전의 주석에는 문서 주석을 사용하십시오.
 # https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md#docComments
 --enable docComments
