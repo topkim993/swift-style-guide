@@ -141,15 +141,17 @@ Swift Style Guide
     
 ### 임포트
 
-모듈 임포트는 내장 프레임워크를 먼저 임포트하고, 빈 줄로 구분하여 서드파티 프레임워크를 임포트합니다.  
+모듈 임포트는 내장, 리모트, 로컬 프레임워크를 빈 줄로 구분하여 알파벳 순으로 작성 합니다.
 
 ```swift
+import Foundation
 import UIKit
 
-import SwiftyColor
-import SwiftyImage
-import Then
-import URLNavigator
+import RIBs
+import RxSwift
+
+import Core
+import RootRIB
 ```
 
 ## 네이밍
